@@ -22,7 +22,7 @@ class Gerechten extends Migration
             $table->unsignedBigInteger('user_ID')->nullable();
 
             $table->foreign('categorie')->references('categorie')->on('categorie')->onDelete('cascade');
-            $table->foreign('user_ID')->references('user_ID')->on('users')->onDelete('cascade');
+            $table->foreign('user_ID')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

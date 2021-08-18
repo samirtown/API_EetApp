@@ -17,7 +17,7 @@ class Favorieten extends Migration
             $table->unsignedBigInteger('gerecht_ID');
             $table->unsignedBigInteger('user_ID');
 
-            $table->foreign('user_ID')->references('user_ID')->on('users')->onDelete('cascade');
+            $table->foreign('user_ID')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('gerecht_ID')->references('gerecht_ID')->on('gerechten')->onDelete('cascade');
         });
     }

@@ -1,8 +1,8 @@
 <?php
-
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class UsersTableSeeder extends Seeder
 {
@@ -14,9 +14,10 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         \DB::table('users')->insert([
-            'name' => 'test',
-            'email' => 'test@gmail.com',
-            'password' => 'test123'
+            'name' => 'test2',
+            'email' => 'test2@gmail.com',
+            'password' => 'test1234',
+            'remember_token' => Str::random(60)
         ]);
     }
 }
