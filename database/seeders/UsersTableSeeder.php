@@ -17,7 +17,6 @@ class UsersTableSeeder extends Seeder
             'name' => 'test2',
             'email' => 'test2@gmail.com',
             'password' => 'test1234',
-            'remember_token' => Str::random(60)
         ]);
     }
 }

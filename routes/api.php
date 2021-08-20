@@ -2,6 +2,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
+ 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,10 +17,6 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::get('/tokens/create', function(Request $request){
     $token = $request->user()->createToken($request->token_name);
 
@@ -25,5 +25,7 @@ Route::get('/tokens/create', function(Request $request){
 
 Route::post('/auth/login', [LoginController::class, 'login']);
 Route::post('/auth/registration', [RegisterController::class, 'register']);
+Route::post('/auth/logout', [RegisterController::class, 'logout']);
+Route::post('/auth/me',[LoginController::class, 'me']);
 
-Route::get('users', [UsersController::class, 'index']);
+
