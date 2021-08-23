@@ -2,6 +2,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\GerechtenController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
  
@@ -22,6 +23,10 @@ Route::get('/tokens/create', function(Request $request){
 
     return ['token' => $token->plainTextToken];
 });
+
+Route::get('/gerechten/{user_ID}', [GerechtenController::class, 'gerechtenGebruiker']);
+Route::get('/gerechten/{gerecht_ID}/instructie', [GerechtenController::class, 'gerechtenInstructie']);
+Route::get('/gerechten/{gerecht_ID}/ingredient', [GerechtenController::class, 'gerechtenIngredient']);
 
 Route::post('/auth/login', [LoginController::class, 'login']);
 Route::post('/auth/registration', [RegisterController::class, 'register']);

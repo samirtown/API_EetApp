@@ -52,7 +52,8 @@ class LoginController extends Controller
             'status_code' => 200,
             'acces_token' => $tokenResult,
             'token_type' => 'Bearer',
-            'message' => 'Valid details'
+            'message' => 'Valid details',
+            'user' => $user
         ]);
     }
 

@@ -21,7 +21,6 @@ class Gerechten extends Migration
             $table->string('categorie')->nullable();
             $table->unsignedBigInteger('user_ID')->nullable();
 
-            $table->foreign('categorie')->references('categorie')->on('categorie')->onDelete('cascade');
             $table->foreign('user_ID')->references('id')->on('users')->onDelete('cascade');
         });
     }
@@ -34,7 +33,6 @@ class Gerechten extends Migration
     public function down()
     {
         schema::table('gerechten', function (Blueprint $table){
-            $table->dropForeign('gerechten_categorie_foreign');
             $table->dropForeign('gerechten_user_ID_foreign');
         });
         Schema::dropIfExists('gerechten');
