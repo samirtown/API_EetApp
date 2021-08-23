@@ -14,56 +14,69 @@ class IngredientSeeder extends Seeder
     public function run()
     {
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'300 gr pasta',
+            'ingredient'=>'pasta',
+            'aantal'=>'300 gram',
             'gerecht_ID'=> 1,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'400 gr kipfilet (in stukjes)',
+            'ingredient'=>'400 gr kipfilet (in stukjes)',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>1,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'250 gr cherry tomaatje',
+            'ingredient'=>'250 gr cherry tomaatje',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>1,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'scheutje olijfolie',
+            'ingredient'=>'scheutje olijfolie',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>1,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'peper en zout',
+            'ingredient'=>'peper en zout',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>1,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'Handje rucola',
+            'ingredient'=>'Handje rucola',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>1,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'60 gr pijnboompitten (geroosterd)', 
+            'ingredient'=>'60 gr pijnboompitten (geroosterd)', 
+            'aantal'=>'300 gram',
             'gerecht_ID'=>1,
         ]);
 
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'600 g biefstuk, lendebiefstuk',
+            'ingredient'=>'600 g biefstuk, lendebiefstuk',
+            'aantal'=>'300 gram',
             'gerecht_ID'=> 2,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'4 tortillas',
+            'ingredient'=>'4 tortillas',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>2,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'2 tomaten, in dunne plakjes',
+            'ingredient'=>'2 tomaten, in dunne plakjes',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>2,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'scheutje olijfolie',
+            'ingredient'=>'scheutje olijfolie',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>2,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'peper en zout',
+            'ingredient'=>'peper en zout',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>2,
         ]);
         \DB::table('ingredient_gerecht')->insert([
-            'beschrijving_ingredient'=>'4 el zure room',
+            'ingredient'=>'4 el zure room',
+            'aantal'=>'300 gram',
             'gerecht_ID'=>2,
         ]);
     }
