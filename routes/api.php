@@ -2,6 +2,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\GerechtenController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
  
@@ -28,4 +29,4 @@ Route::post('/auth/registration', [RegisterController::class, 'register']);
 Route::post('/auth/logout', [RegisterController::class, 'logout']);
 Route::post('/auth/me',[LoginController::class, 'me']);
 
-
+Route::post('/gerecht/create', [GerechtenController::class, 'create']);

@@ -20,8 +20,6 @@ class Gerechten extends Migration
             $table->longText('afbeelding')->nullable();
             $table->string('categorie')->nullable();
             $table->unsignedBigInteger('user_ID')->nullable();
-
-            $table->foreign('categorie')->references('categorie')->on('categorie')->onDelete('cascade');
             $table->foreign('user_ID')->references('id')->on('users')->onDelete('cascade');
         });
     }

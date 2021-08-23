@@ -14,7 +14,7 @@ class InstructieGerecht extends Migration
     public function up()
     {
         Schema::create('instructie_gerecht', function (Blueprint $table) {
-            $table->string('naam_instructie');
+            $table->string('naam_instructie')->nullable();
             $table->longText('beschrijving');
             $table->integer('stap');
             $table->unsignedBigInteger('gerecht_ID');

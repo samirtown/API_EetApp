@@ -15,7 +15,8 @@ class IngredientGerecht extends Migration
     {
         Schema::create('ingredient_gerecht', function (Blueprint $table) {
             $table->unsignedBigInteger('gerecht_ID');
-
+            $table->string('aantal');
+            $table->string('ingredient');
             $table->foreign('gerecht_ID')->references('gerecht_ID')->on('gerechten')->onDelete('cascade');
         });
     }
