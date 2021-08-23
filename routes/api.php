@@ -33,4 +33,4 @@ Route::post('/auth/registration', [RegisterController::class, 'register']);
 Route::post('/auth/logout', [RegisterController::class, 'logout']);
 Route::post('/auth/me',[LoginController::class, 'me']);
 
-
+Route::post('/gerecht/create', [GerechtenController::class, 'create']);
