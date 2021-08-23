@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class GerechtenController extends Controller
 {
     public function create(Request $request){
 
-        $userId = Auth::id();
+        $userId = DB::table('users')->where('name', $request['user_name'])->value('id');
 
         $gerecht_ID = DB::table('gerechten')->insertGetId([
             'gerecht_naam' => $request['naam'],

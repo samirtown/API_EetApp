@@ -24,6 +24,10 @@ Route::get('/tokens/create', function(Request $request){
     return ['token' => $token->plainTextToken];
 });
 
+Route::middleware(['auth:api'])->group(function(){
+
+});
+
 Route::get('/gerechten/{user_ID}', [GerechtenController::class, 'gerechtenGebruiker']);
 Route::get('/gerechten/{gerecht_ID}/instructie', [GerechtenController::class, 'gerechtenInstructie']);
 Route::get('/gerechten/{gerecht_ID}/ingredient', [GerechtenController::class, 'gerechtenIngredient']);
@@ -31,6 +35,5 @@ Route::get('/gerechten/{gerecht_ID}/ingredient', [GerechtenController::class, 'g
 Route::post('/auth/login', [LoginController::class, 'login']);
 Route::post('/auth/registration', [RegisterController::class, 'register']);
 Route::post('/auth/logout', [RegisterController::class, 'logout']);
-Route::post('/auth/me',[LoginController::class, 'me']);
 
 Route::post('/gerecht/create', [GerechtenController::class, 'create']);
